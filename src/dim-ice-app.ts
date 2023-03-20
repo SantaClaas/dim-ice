@@ -18,7 +18,7 @@ const logo = new URL('../../assets/logo.svg', import.meta.url).href;
 const clientSecret = '51Nwi4I83gxxgsqfPWZQLALHlIJgEjlIIh9o_Zdvh10';
 const clientId = 'NgtasltAXdbQgao8vU5H1pTLEBX1EGvuNThYYpUhoxA';
 
-const redirectUri = 'http://localhost:8001/redirect';
+const redirectUri = new URL('/redirect', location.href);
 
 //TODO make instance user-configurable
 const instance = 'mastodon.social';
@@ -30,7 +30,7 @@ authorizationUrl.searchParams.set('client_id', clientId);
 authorizationUrl.searchParams.set('scope', 'read');
 // authorizationUrl.searchParams.set("redirect_uri", "urn:ietf:wg:oauth:2.0:oob");
 //TODO make redirect url current app url
-authorizationUrl.searchParams.set('redirect_uri', redirectUri);
+authorizationUrl.searchParams.set('redirect_uri', redirectUri.toString());
 authorizationUrl.searchParams.set('response_type', 'code');
 
 async function exchangeForToken(
