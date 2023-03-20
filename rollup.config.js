@@ -26,11 +26,10 @@ export default {
     }),
     /** Resolve bare module imports */
     nodeResolve(),
-    /** Minify JS, compile JS to a lower language target */
+    /** Minify JS */
     esbuild({
       minify: true,
-      target: ['chrome64', 'firefox67', 'safari11.1'],
-    }),    
+    }),
     /** Bundle assets references via import.meta.url */
     importMetaAssets(),
     /** Minify html and css tagged template literals */
