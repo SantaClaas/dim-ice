@@ -29,6 +29,7 @@ export default {
     /** Minify JS */
     esbuild({
       minify: true,
+      target: 'esnext',
     }),
     /** Bundle assets references via import.meta.url */
     importMetaAssets(),
