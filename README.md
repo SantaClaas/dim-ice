@@ -24,3 +24,9 @@
 For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
 
 If you customize the configuration a lot, you can consider moving them to individual files.
+
+## Ideas
+
+- Can I create a router component?
+  - Can I implement an js`@authorize({ role: string | undefined, isAuthenticationRequired: boolean : true})` decorator? To only route to page components when it is authorized.
+  - With an js`@page("/debug/components")` decorator?
